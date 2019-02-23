@@ -1,0 +1,20 @@
+React Js lifecycle hooks
+
+3 phases
+1. Mount 
+2. Update
+3. Didmount
+
+Mount
+	constructor
+	render
+	componentDidMount
+
+Update
+	render
+	componentDidUpdate
+
+Didmount
+	componentWillUnMount
+	
+	
