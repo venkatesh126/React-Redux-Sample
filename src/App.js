@@ -1,27 +1,35 @@
 import React, { Component } from 'react';
 import './App.css';
-import Posts from './components/posts';
 import PostForm from './components/postform';
 import { Provider } from "react-redux";
 import store from "../src/store"
 import ReduxDemo from './components/reduxDemo';
+import Header from "./components/header";
+import { BrowserRouter, Route, Switch } from "react-router-dom"
+import posts from './components/posts';
+import Home from './components/home';
 class App extends Component {
 
   render() {
     return (
       <Provider store={store}>
-        <div className="App container">
-          <header className="App-header">
-            {/* <img src={logo} className="App-logo" alt="logo" /> */}
-            <p>
-              RedUX and React JS
-          </p>
-          </header>
-          <PostForm />
-          <Posts />
+        <div className="App">
+          <BrowserRouter>
+            <React.Fragment>
+              <Header />
+              <Switch>
+                <Route path="/" component={Home} exact></Route>
+                <Route path="/posts" component={posts} exact></Route>
+              </Switch>
+            </React.Fragment>
+          </BrowserRouter>
+
+          {/* <PostForm />
+          <Posts /> */}
           <ReduxDemo />
         </div>
       </Provider>
+
     );
   }
 }
