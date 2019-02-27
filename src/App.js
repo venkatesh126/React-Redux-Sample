@@ -8,6 +8,7 @@ import Header from "./components/header";
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import posts from './components/posts';
 import Home from './components/home';
+import Conditional from './components/conditionalRendering';
 class App extends Component {
 
   render() {
@@ -20,13 +21,14 @@ class App extends Component {
               <Switch>
                 <Route path="/" component={Home} exact></Route>
                 <Route path="/posts" component={posts} exact></Route>
+                <Route path="/Conditional" component={Conditional} exact></Route>
               </Switch>
             </React.Fragment>
           </BrowserRouter>
 
           {/* <PostForm />
           <Posts /> */}
-          <ReduxDemo />
+          {/* <ReduxDemo /> */}
         </div>
       </Provider>
 

@@ -1,8 +1,9 @@
-import { FETCH_POSTS, NEW_POSTS } from "../actions/types"
+import { FETCH_POSTS, NEW_POSTS ,FORM} from "../actions/types"
 
 const initialState = {
     items: [],
-    item: {}
+    item: {},
+    form:{}
 }
 
 export default (state = initialState, { type, payload }) => {
@@ -17,6 +18,12 @@ export default (state = initialState, { type, payload }) => {
                 ...state,
                 item: payload
             }
+        case FORM:
+            return {
+                ...state,
+                form: payload
+            }
+
         default:
             return state
     }
