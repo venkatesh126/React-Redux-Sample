@@ -15,11 +15,14 @@ class Header extends Component {
                         <div className="collapse navbar-collapse" id="navbarResponsive">
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item active">
-                                    <a className="nav-link" href="#"><NavLink to="/">Home</NavLink><span className="sr-only">(current)</span>
-                                    </a>
+                                    <span className="nav-link" href="#"><NavLink to="/">Home</NavLink><span className="sr-only">(current)</span>
+                                    </span>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#"><NavLink to="/posts">Posts</NavLink></a>
+                                    <span className="nav-link" href="#"><NavLink to="/posts">Posts</NavLink></span>
+                                </li>
+                                <li className="nav-item">
+                                    <span className="nav-link" href="#"><NavLink to="/counter">Counter</NavLink></span>
                                 </li>
                                 {/* <li className="nav-item">
                                     <a className="nav-link" href="#"><NavLink to="/Conditional">Conditional</NavLink></a>
